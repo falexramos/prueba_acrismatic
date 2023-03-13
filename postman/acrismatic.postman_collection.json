@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "496a5a5d-3d98-4374-b167-fce0a31e6322",
+		"name": "acrismatic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/recaudaciones?fechaInicio=2023-01-19&fechaFin=2023-01-19",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/recaudaciones?fechaInicio=2023-01-19&fechaFin=2023-01-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"recaudaciones"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2023-01-19"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2023-01-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/crearCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"nombre\":\"cliente 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/crearCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"crearCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/crearMaquina",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"nombre\": \"maquina 1\",\r\n  \"cliente\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Bar Pepe\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/crearMaquina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"crearMaquina"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/crearContadorManual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"maquina\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Máquina 1\",\r\n        \"cliente\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"Cliente 1\"\r\n        }\r\n    },\r\n    \"entradasManuales\": 102,\r\n    \"salidasManuales\": 101,\r\n    \"fecha\": \"2022-03-03T15:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/crearContadorManual",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"crearContadorManual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/crearRecaudacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"importe\": 5,\r\n    \"fecha\": \"2022-01-21T00:00:00\",\r\n    \"contadorManual\": {\r\n        \"id\": 1,\r\n        \"maquina\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"Máquina A\",\r\n            \"cliente\": {\r\n                \"id\": 1,\r\n                \"nombre\": \"Cliente A\"\r\n            }\r\n        },\r\n        \"entradasManuales\": 100,\r\n        \"salidasManuales\": 50,\r\n        \"fecha\": \"2022-05-01T12:00:00\"\r\n    },\r\n    \"maquina\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Máquina A\",\r\n        \"cliente\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"Cliente A\"\r\n        }\r\n    },\r\n    \"cliente\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Cliente A\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/crearRecaudacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"crearRecaudacion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
