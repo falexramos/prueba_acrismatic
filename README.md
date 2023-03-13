@@ -25,6 +25,7 @@ El endpoint devuelve un objeto JSON con la siguiente estructura:
 
 <img src="https://raw.githubusercontent.com/falexramos/prueba_acrismatic/main/img/formatosalidaJson.png" alt="Formato salida JSON">
 
+en la Carpeta de postman, se encuentra un ejemplo de como utilizar estos endpoint. 
 
 Autor
 Favian Ramos
